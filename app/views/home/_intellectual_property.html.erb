@@ -1,20 +1,13 @@
 <table>
   <tbody>
-    <tr>
-      <td><strong>Procedural Step</strong></td>
-      <td>Date</td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
+    <% @results.each do |k, v| %>
+      <% if k.to_sym == :date || k.to_sym == :court || k.to_sym == :type %>
+        <% else %>
+          <tr>
+            <td><strong><%= k.to_s.humanize.downcase %></strong></td>
+            <td><%= v.strftime("%d %B, %Y") if v.is_a?(Date) %></td>
+          </tr>
+      <% end %>
+    <% end %>
   </tbody>
 </table>
