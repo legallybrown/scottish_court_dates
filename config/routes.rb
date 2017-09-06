@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#show'
 
+  get 'home' => 'home#show'
+
   post 'home' => 'home#date_calculator'
 
 
