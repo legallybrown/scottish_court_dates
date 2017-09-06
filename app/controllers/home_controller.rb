@@ -4,7 +4,8 @@ class HomeController < ApplicationController
   end
 
   def create
-    puts "************* IN CREATE ************"
+    puts "************* IN CREATE ************ #{params[:date]}"
+
     render :results
   end
 
