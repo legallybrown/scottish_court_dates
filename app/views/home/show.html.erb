@@ -1,7 +1,10 @@
 <h1>Hello World!</h1>
 
 <div>
-  <%= form_tag({:controller=>"home", :action=>"create"}, method: :post) do %>
-    <%= submit_tag 'Enter a date', name: nil %>
+  <%= form_tag({:controller=>"home", :action=>"create"}, html: {class: "date_picker"}, method: :post) do %> 
+    <p>
+      <%= date_field_tag :date %>
+      <%= submit_tag 'Calculate Dates', name: nil %>
+    </p>
   <% end %>
 </div>
