@@ -4,7 +4,6 @@ class HomeController < ApplicationController
   end
 
   def create
-    puts "************* IN CREATE ************ #{params[:date]}"
     @results = {}
     @results[:date] = params[:date]
     puts "#{@results}"
