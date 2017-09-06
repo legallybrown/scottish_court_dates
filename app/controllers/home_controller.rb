@@ -6,7 +6,9 @@ class HomeController < ApplicationController
   def create
     @results = {}
     @results[:date] = params[:date]
-    puts "#{@results}"
+    puts "#{params}"
+    @results[:court] = params[:court]
+    @results[:type] = params[:type]
     render :results
   end
 

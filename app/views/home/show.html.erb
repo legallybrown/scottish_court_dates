@@ -8,11 +8,11 @@
   <%= form_tag({:controller=>"home", :action=>"create"}, html: {class: "date_picker"}, method: :post) do %>
     <p>
       <%= label_tag "Select Court" %>
-      <%= select_tag "Select Court", "<option>Court of Session</option><option>Sheriff Court</option>".html_safe %>
+      <%= select_tag "court", "<option>Court of Session</option><option>Sheriff Court</option>".html_safe %>
     </p>
     <p>
       <%= label_tag "Select Court Action Type" %>
-      <%= select_tag "Select Court Action Type", "<option>Commercial</option><option>Intellectual Property</option><option>Ordinary</option><option>Personal Injury</option><option>Petition</option><option>Family</option><option>Inner House</option><option>Sheriff Appeal Court</option>".html_safe %>
+      <%= select_tag "type", "<option>Commercial</option><option>Intellectual Property</option><option>Ordinary</option><option>Personal Injury</option><option>Petition</option><option>Family</option><option>Inner House</option><option>Sheriff Appeal Court</option>".html_safe %>
     </p>
     <p>
       <%= label_tag "Date Court Action Will be Served on Defender/ Defendant" %>
