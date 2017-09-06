@@ -25,9 +25,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
+gem 'bootstrap', '~> 4.0.0.beta'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'
