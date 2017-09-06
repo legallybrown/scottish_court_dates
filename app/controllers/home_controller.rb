@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   def show
   end
 
-  def create
+  def date_calculator
     @results = {}
     @results[:date] = params[:date]
     puts "#{params}"
