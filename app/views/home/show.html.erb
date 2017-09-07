@@ -1,0 +1,27 @@
+<p>
+  This website calculate upcoming dates for Scottish Civil Court Actions based on the court and type of court action. These results are provided as-is without any warranty or liability whatsoever. The information available on this website  <strong>should not</strong> be relied upon as a sole basis for responding/planning court action in Scotland. The data and calculations made by this site are indicative and strictly for information only. <strong>Court dates are subject to change and you should always check and confirm timings with the relevant Scottish court</strong>  If you have been served with, or intend to serve court action on an individual/ company and you are based in Scotland, you should <strong>seek professional legal advice in any event</strong>. Nothing on this website should be taken as legal advice.
+</p>
+
+<div class="col">
+</div>
+<div class="col-6">
+  <%= form_tag({:controller=>"home", :action=>"date_calculator"}, html: {class: "date_picker"}, method: :post) do %>
+    <p>
+      <%= label_tag "Select Court" %>
+      <%= select_tag "court", "<option>Court of Session</option><option>Sheriff Court</option>".html_safe %>
+    </p>
+    <p>
+      <%= label_tag "Select Court Action Type" %>
+      <%= select_tag "type", "<option>Intellectual Property</option><option>Commercial</option><option>Ordinary</option><option>Personal Injury</option><option>Petition</option><option>Family</option><option>Inner House</option><option>Sheriff Appeal Court</option>".html_safe %>
+    </p>
+    <p>
+      <%= label_tag "Date Court Action Will be Served on Defender/ Defendant" %>
+      <%= date_field_tag :date, Date.today %>
+    </p>
+    <p>
+      <%= submit_tag 'Calculate Dates', name: nil %>
+    </p>
+  <% end %>
+</div>
+<div class="col">
+</div>
