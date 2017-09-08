@@ -22,7 +22,7 @@ class HomeController < ApplicationController
     }
     calculate_dates_for_action(date, type, court)
     #remove this once all data is in place
-    if type == "Intellectual Property" || type == "Commercial" && court == "Court of Session"
+    if type == "Intellectual Property" && court == "Court of Session" || type == "Commercial" && court == "Court of Session"
       render :results
     else
       render :coming_soon
