@@ -1,10 +1,6 @@
 <p>You have selected a <strong> <%= @results[:type]%> Action </strong> in the <strong> <%= @results[:court]%></strong>.</p>
 <p>Based on your selected date the court timetable will begin on <strong><%= @results[:date].strftime("%d %B, %Y")%></strong> and the key upcoming dates are as follows: </p>
 
-<% if @results[:type] == "Intellectual Property" || @results[:type] == "Commercial" && @results[:court] == "Court of Session" %>
-
 <%= render "intellectual_property" %>
-
-<% end %>
 
 <%= link_to 'Back to search', :back %>
