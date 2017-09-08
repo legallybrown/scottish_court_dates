@@ -1,11 +1,12 @@
-<table>
+<table class="table table-striped">
   <tbody>
     <% @results.each do |k, v| %>
       <% if k.to_sym == :date || k.to_sym == :court || k.to_sym == :type %>
         <% else %>
           <tr>
-            <td><strong><%= k.to_s.humanize.downcase %></strong></td>
-            <td><%= v.strftime("%d %B, %Y") if v.is_a?(Date) %></td>
+            <td><strong><%= k.to_s.humanize.titlecase %></strong></td>
+            <td><%= v[0].strftime("%d %B, %Y") if v[0].is_a?(Date) %></td>
+            <td><%= v[1] %></td>
           </tr>
       <% end %>
     <% end %>
