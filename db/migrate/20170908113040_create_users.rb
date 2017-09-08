@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.string :name
       t.string :company_name
-      t.string :email, :null => false, :default => ""
+      t.string :email,  :null => false, :default => ""
 
       t.timestamps null: false
     end
