@@ -12,9 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require turbolinks
 //= require_tree .
 //= require moment
 //= require jquery3
 //= require popper
 //= require bootstrap-datetimepicker
+
+$(function(){ $(document).foundation(); });

@@ -52,7 +52,6 @@ class HomeController < ApplicationController
   end
 
   def commercial(date)
-    puts "*******in COMMERCIAL with date as #{date}"
     @results[:earliest_calling] = @results[:date] + 21.days #nb this is based on Europe @ no earlier than 21 days - if outside Europe date is likely to be 42 days
     @results[:defences_due] = @results[:earliest_calling] + 7.days
     @results[:preliminary_hearing] = @results[:defences_due] + 14.days #within 14 days after defences or answers (as the case may be) have been lodged
@@ -62,7 +61,6 @@ class HomeController < ApplicationController
   end
 
   def ordinary(date)
-    puts "*********in ORDINARY with date as #{date}"
     render :coming_soon
   end
 

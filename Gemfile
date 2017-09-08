@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'momentjs-rails', '>= 2.9.0'
+gem 'foundation-rails'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 gem 'bootstrap', '~> 4.0.0.beta'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
