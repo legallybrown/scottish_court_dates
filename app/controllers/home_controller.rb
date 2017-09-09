@@ -1,10 +1,10 @@
 class HomeController < ApplicationController
 
   DESCRIPTIONS = {
-    earliest_calling: "earliest calling description HERE", 
-    defences_due: "date defences are due to be lodged at court",
-    preliminary_hearing: "date of preliminary hearing",
-    final_calling: "last date summons can be called before the action falls away"
+    earliest_calling: "When the names of parties are published in a court list, this is also published on the court website, containing details of cases that have called i.e. the summons has been served upon the defender and the period of notice has expired. To lodge a case for calling, you need to present the signeted Summons with the Execution of Service included at the back of the Summons, and a calling slip.  ", 
+    defences_due: "Last date by which defences are due to be lodged at court. Defences are the defender’s pleadings in answer to the summons. Defences are due no later than 7 days after the case has called. Defences must be signed on the last page by counsel. ",
+    preliminary_hearing: "Very soon after its allocation to the particular judge, the action will be brought before him or her for a preliminary hearing.  The purpose of that hearing is to take stock of the dispute and to choose what appears to be the best means of resolving it. ",
+    final_calling: "A Summons must be ""called"" at least a year and a day from the earliest calling date (above). The final calling date is the last date summons can be called before the action falls away. If this period expires the court action must be re-raised."
   }
 
   def show
